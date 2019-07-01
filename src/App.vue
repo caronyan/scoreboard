@@ -1,12 +1,28 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <nprogress-container></nprogress-container>
+    <sidebar></sidebar>
+    <app-container></app-container>
   </div>
 </template>
+
+<script>
+import NprogressContainer from 'vue-nprogress/src/NprogressContainer'
+import { Sidebar, AppContainer } from '@/components/layout/'
+// import { mapGetters, mapActions } from 'vuex'
+
+
+export default {
+  components: {
+    Sidebar,
+    AppContainer,
+    NprogressContainer
+  },
+  beforeMount() {
+    
+  },
+}
+</script>
 
 <style>
 #app {
