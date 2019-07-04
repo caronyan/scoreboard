@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <nprogress-container></nprogress-container>
-    <header></header>
     <sidebar></sidebar>
     <app-container></app-container>
   </div>
@@ -9,13 +8,12 @@
 
 <script>
 import NprogressContainer from 'vue-nprogress/src/NprogressContainer'
-import { Sidebar, AppContainer, Header } from '@/components/layout/'
+import { Sidebar, AppContainer } from '@/components/layout/'
 // import { mapGetters, mapActions } from 'vuex'
 
 
 export default {
   components: {
-    Header,
     Sidebar,
     AppContainer,
     NprogressContainer
