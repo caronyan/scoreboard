@@ -1,7 +1,8 @@
 <template>
   <div id="app">
+    <input type="button" value="press me!" @click="toggleSidebar(!sidebar.opened)" />
     <nprogress-container></nprogress-container>
-    <sidebar></sidebar>
+    <sidebar v-show="sidebar.opened"></sidebar>
     <app-container></app-container>
   </div>
 </template>
@@ -9,8 +10,7 @@
 <script>
 import NprogressContainer from 'vue-nprogress/src/NprogressContainer'
 import { Sidebar, AppContainer } from '@/components/layout/'
-// import { mapGetters, mapActions } from 'vuex'
-
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
   components: {
@@ -18,9 +18,18 @@ export default {
     AppContainer,
     NprogressContainer
   },
+
   beforeMount() {
     
   },
+
+  computed: mapGetters({
+    sidebar: 'sidebar'
+  }),
+
+  methods: mapActions([
+    'toggleSidebar'
+  ])
 }
 </script>
 
