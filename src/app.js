@@ -11,13 +11,11 @@ Vue.use(NProgress)
 Vue.config.productionTip = false
 
 sync(store, router)
-const nprogress = new NProgress({ parent: '.nprogress-container' })
 // const { state } = store
 
 const app = new Vue({
     router,
     store,
-    nprogress,
     ...App
   })
   
