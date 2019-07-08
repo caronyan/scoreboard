@@ -10,6 +10,7 @@
 import ace from 'ace-builds'
 import 'ace-builds/src-noconflict/theme-xcode'
 import 'ace-builds/src-noconflict/mode-python'
+import * as beautify from 'ace-builds/src-noconflict/ext-beautify'
 
 export default {
     mounted () {
@@ -22,12 +23,16 @@ export default {
         tabSize: 4, 
         value: ''
       })
+
+      this.aceEditor.setReadOnly(true);
+      beautify.beautify(this.aceEditor.session)
+    
     },
     data () {
       return {
         aceEditor: null,
         themePath: 'ace/theme/xcode',
-        modePath: 'ace/mode/python' 
+        modePath: 'ace/mode/python'
       }
     }
 }
