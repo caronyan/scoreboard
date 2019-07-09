@@ -1,5 +1,8 @@
 <template>
     <aside class="sidebar">
+        <p>
+            LOGO
+        </p>
         <ul>
             <li>Title 1</li>
             <li>Title 2</li>
@@ -17,7 +20,7 @@ export default {
 <style lang="scss">
 .sidebar {
     position: fixed;
-    top: 50px;
+    top: 0;
     left: 0;
     bottom: 0;
     padding: 20px 0 50px;
