@@ -3,8 +3,15 @@
         <p>
             LOGO
         </p>
-        <ul>
-            <li>Title 1</li>
+        <ul class="menu">
+            <li>
+                <router-link to="" :exact="true">
+                    <span>
+                        <i>icon</i>
+                        Title 1
+                    </span>
+                </router-link>
+            </li>
             <li>Title 2</li>
             <li>Title 3</li>            
         </ul>
@@ -34,5 +41,18 @@ export default {
     overflow-y: auto;
     overflow-x: hidden;
 }
+
+.menu {
+    list-style: none;
+    line-height: 1.25;
+    margin: 0 10px 0 15px;
+    a {
+        cursor: pointer;
+        text-decoration: none;
+        display: block;
+        padding: .5em .75em;
+    }
+}
+
 </style>
 
