@@ -4,23 +4,26 @@
             LOGO
         </p>
         <ul class="menu">
-            <li>
-                <router-link to="" :exact="true">
+            <li v-for="item in menus" v-bind:key="item.id">
+                <router-link :to="item.path" :exact="true">
                     <span>
                         <i>icon</i>
-                        Title 1
+                        {{ item.name }}
                     </span>
                 </router-link>
-            </li>
-            <li>Title 2</li>
-            <li>Title 3</li>            
+            </li>     
         </ul>
     </aside>
 </template>
 
 <script>
 export default {
-    
+    props: {
+        menus: {
+            type: Array,
+            default: () => []
+        }
+    },
 }
 </script>
 
