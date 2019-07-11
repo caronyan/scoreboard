@@ -45,13 +45,18 @@ export default {
 .menu {
     list-style: none;
     line-height: 1.25;
-    margin: 0 10px 0 15px;
+    margin: 0;
     a {
         cursor: pointer;
         text-decoration: none;
         display: block;
         padding: .5em .75em;
     }
+}
+
+ul {
+    margin: 0;
+    padding: 0;
 }
 
 </style>
