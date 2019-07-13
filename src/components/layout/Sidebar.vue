@@ -6,8 +6,10 @@
         <ul class="menu">
             <li v-for="item in menus" v-bind:key="item.id">
                 <router-link :to="item.path" :exact="true">
-                    <span>
-                        <i>icon</i>
+                    <span class="menu-icon">
+                        <i :class="['fa', item.meta.icon]"></i>
+                    </span>
+                    <span class="menu-name">
                         {{ item.name }}
                     </span>
                 </router-link>
@@ -55,6 +57,10 @@ export default {
         display: block;
         padding: .5em .75em;
     }
+}
+
+.menu-icon {
+    margin: 0 1rem 0 -2.5rem;
 }
 
 ul {
