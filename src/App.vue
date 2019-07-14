@@ -2,7 +2,7 @@
   <div id="app">
     <input type="button" value="press me!" @click="toggleSidebar(!sidebar.opened)" />
     <nprogress-container></nprogress-container>
-    <sidebar v-show="sidebar.opened"></sidebar>
+    <sidebar v-show="sidebar.opened" :menus="menus"></sidebar>
     <app-container></app-container>
   </div>
 </template>
@@ -24,7 +24,8 @@ export default {
   },
 
   computed: mapGetters({
-    sidebar: 'sidebar'
+    sidebar: 'sidebar',
+    menus: 'menu'
   }),
 
   methods: mapActions([
@@ -42,4 +43,10 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+.menu-item-active {
+  border-left: 5px solid red;
+  color: red;
+}
+
 </style>
