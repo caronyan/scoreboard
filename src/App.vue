@@ -20,7 +20,20 @@ export default {
   },
 
   beforeMount() {
-    
+    const { body } = document
+    const WIDTH = 765
+
+    const deviceListener = () => {
+      if (!document.hidden) {
+        let rect = body.getBoundingClientRect()
+        let showSidebar = rect.width >= WIDTH
+        this.toggleSidebar(showSidebar)
+      }
+    }
+
+    document.addEventListener('visibilitychange', deviceListener)
+    window.addEventListener('DOMContentLoaded', deviceListener)
+    window.addEventListener('resize', deviceListener)
   },
 
   computed: mapGetters({
