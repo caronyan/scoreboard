@@ -48,6 +48,11 @@ export default {
 </script>
 
 <style>
+@import '~animate.css';
+.animated {
+  animation-duration: .377s;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

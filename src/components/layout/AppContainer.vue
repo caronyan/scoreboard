@@ -6,7 +6,7 @@
                 enter-active-class="fadeIn"
                 leave-active-class="fadeOut"
                 appear>
-                <router-view></router-view>
+                <router-view class="animated"></router-view>
             </transition>
         </div>
     </section>

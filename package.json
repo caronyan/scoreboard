@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "ace-builds": "^1.4.5",
+    "animate.css": "^3.7.2",
     "core-js": "^2.6.5",
     "font-awesome": "^4.7.0",
     "sass-loader": "^7.1.0",
