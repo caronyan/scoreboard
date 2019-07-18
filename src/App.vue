@@ -58,13 +58,13 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: grey;
   margin-top: 60px;
 }
 
 .menu-item-active {
-  border-left: 5px solid red;
-  color: red;
+  border-left: 5px solid #42b983;
+  color: #42b983;
 }
 
 </style>
