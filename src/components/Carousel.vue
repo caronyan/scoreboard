@@ -6,7 +6,7 @@
         <div class="carousel-container">
             <slot></slot>
         </div>
-        <div class="carousel-control">
+        <div class="carousel-nav">
             <a href=""></a>
             <a href=""></a>
         </div>
