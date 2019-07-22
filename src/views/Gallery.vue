@@ -1,16 +1,22 @@
 <template>
     <div>
-        <carousel></carousel>  
+        <agile>
+            <div class="slide">
+                slide 1
+            </div>
+            <div class="slide">slide 2</div>
+            <div class="slide">slide 3</div>    
+        </agile>  
     </div>
 </template>
 
 <script>
-import Carousel from '@/components/Carousel.vue'
+import { VueAgile } from 'vue-agile'
 
 export default {
     name: 'gallery',
     components: {
-        Carousel
+        agile: VueAgile
     }
 }
 </script>

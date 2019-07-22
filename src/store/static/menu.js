@@ -15,5 +15,13 @@ export default [
         path: '/about',
         name: 'About',
         component: () => import('@/views/About.vue')
-    }
+    }, {
+        meta: {
+            id: 2,
+            icon: 'fa-info'
+        },
+        path: '/gallery',
+        name: 'Gallery',
+        component: () => import('@/views/Gallery.vue')
+    } 
 ]
