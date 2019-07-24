@@ -2,7 +2,7 @@
     <div>
         <agile>
             <div class="slide">
-                <img alt="Vue logo" src="@/assets/logo.png">
+                <h3>TEST</h3>
             </div>
             <div class="slide">
                 <img alt="Vue logo" src="@/assets/logo.png">
@@ -10,6 +10,8 @@
             <div class="slide">
                 <img alt="Vue logo" src="@/assets/logo.png">    
             </div>    
+            <template slot="prevButton"><i class="fas fa-chevron-left"></i></template>
+            <template slot="nextButton"><i class="fas fa-chevron-right"></i></template>
         </agile>  
     </div>
 </template>
