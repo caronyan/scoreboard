@@ -1,28 +1,20 @@
 <template>
     <div>
-        <agile>
-            <div class="slide">
-                <h3>TEST</h3>
-            </div>
-            <div class="slide">
-                <img alt="Vue logo" src="@/assets/logo.png">
-            </div>
-            <div class="slide">
-                <img alt="Vue logo" src="@/assets/logo.png">    
-            </div>    
-            <template slot="prevButton"><i class="fas fa-chevron-left"></i></template>
-            <template slot="nextButton"><i class="fas fa-chevron-right"></i></template>
-        </agile>  
+        <carousel>
+            <carousel-item></carousel-item>
+        </carousel>
     </div>
 </template>
 
 <script>
-import { VueAgile } from 'vue-agile'
+import Carousel from '@/components/Carousel'
+import CarouselItem from '@/components/CarouselItem'
 
 export default {
     name: 'gallery',
     components: {
-        agile: VueAgile
+        Carousel,
+        CarouselItem
     }
 }
 </script>
